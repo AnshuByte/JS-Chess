@@ -1,0 +1,1 @@
+square.classList.add("beige")
