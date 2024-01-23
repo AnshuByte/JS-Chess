@@ -1,1 +1,0 @@
-square.classList.add("beige")
