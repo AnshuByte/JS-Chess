@@ -55,7 +55,7 @@ function dragStart(e){
     draggedElement = e.target
 }
 
-function dragOver(){
+function dragOver(e){
     e.preventDefault()
 }
 
