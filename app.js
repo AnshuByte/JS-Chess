@@ -18,7 +18,7 @@ function createBoard(){
         const square =  document.createElement('div')
         square.classList.add('square')
         square.innerHTML = startPices
-        square.firstChild && square.firstChild?.setAttribute ('draggable',true),
+        square.firstChild?.setAttribute ('draggable',true),
         square.setAttribute('square-id',i)
         // square.classList.add("beige")
         const row = Math.floor((63- i)/8) + 1
@@ -37,5 +37,26 @@ function createBoard(){
     })
 }
 createBoard()
+
+const allSquares = document.querySelectorAll("#gameboard .square")
+
+// console.log(allSquares);
+allSquares.forEach(square => {
+    square.addEventListener('dragstart', dragStart)
+    square.addEventListener('dragover', dragOver)
+    square.addEventListener('drop', dragDrop)
+
+})
+
+let startPositionId
+let draggedElement
+function dragStart(e){
+    console.log(e.target.parentNode.getAttribute('square-id'));
+    draggedElement = e.target
+}
+
+function dragOver(){
+    e.preventDefault
+}
 
 
