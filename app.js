@@ -56,7 +56,10 @@ function dragStart(e){
 }
 
 function dragOver(){
-    e.preventDefault
+    e.preventDefault()
 }
 
+function dragDrop(){
+    
+}
 
