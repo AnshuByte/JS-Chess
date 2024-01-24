@@ -1,1 +1,0 @@
->Chess game using JavaScript
