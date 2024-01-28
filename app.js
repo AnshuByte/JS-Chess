@@ -2,7 +2,7 @@ const gameBoard = document.querySelector("#gameboard")
 const playerDisplay = document.querySelector("#player")
 const infoDisplay = document.querySelector("#info-display")
 const width = 8
-const startPices = [
+const startPieces = [
     rook,knight,bishop,queen,king,bishop,knight,rook,
     pawn,pawn,pawn,pawn,pawn,pawn,pawn,pawn,
     '','','','','','','','',
@@ -14,10 +14,10 @@ const startPices = [
 ]
 
 function createBoard(){
-    startPices.forEach((startPices,i)=>{
+    startPieces.forEach((startPieces,i)=>{
         const square =  document.createElement('div')
         square.classList.add('square')
-        square.innerHTML = startPices
+        square.innerHTML = startPieces
         square.firstChild?.setAttribute ('draggable',true),
         square.setAttribute('square-id',i)
         // square.classList.add("beige")
@@ -59,7 +59,10 @@ function dragOver(e){
     e.preventDefault()
 }
 
-function dragDrop(){
-    
+function dragDrop(e){
+    e.stopPropagation()
+
+    // e.target.parentNode.append(draggedElement)
+    e.target.append(draggedElement)
 }
 

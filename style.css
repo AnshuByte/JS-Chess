@@ -1,19 +1,45 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 #gameboard{
-    width: 320px;
-    height : 320px;
+    width: 640px;
+    height : 640px;
     /* background-color: black; */
     display: flex;
     flex-wrap: wrap;
 }
+.main{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    /* align-items: center; */
+    justify-content: center;
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fc0.wallpaperflare.com%2Fpreview%2F727%2F760%2F37%2Fblack-and-white-blurred-background-board-game-chess.jpg&f=1&nofb=1&ipt=f240a39a3c2285f6472e687e86927b8ec4e667d09873dd94074a19819b6b52b8&ipo=images);
+}
 
 .square{
-    height : 40px;
-    width: 40px;
+    height : 80px;
+    width: 80px;
+    position:relative;
+    
 }
 .square svg{
-    height: 30px;
-    width: 30px;
-    margin: 5px;
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+    position: relative;
+    z-index: -9;
+}
+path{
+    position: relative;
+    z-index: -10;
+}
+.pieces{
+    position: relative;
+    z-index: 9;
 }
 .beige{
     background-color:rgb(110, 110, 99);
@@ -26,4 +52,10 @@
 }
 .white{
     fill : white;
+}
+p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
 }
